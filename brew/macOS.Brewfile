@@ -73,4 +73,16 @@ cask "zoomus"
 ##################### mas #####################
 mas "Amphetamine", id: 937984704
 mas "GIPHY CAPTURE", id: 668208984
+mas "Blackmagic Disk Speed Test", id: 425264550
+mas "CARROT Weather", id: 993487541
+mas "CCMenu", id: 603117688
+mas "DrCleaner", id: 921458519
+mas "Frame.io", id: 992958444
+mas "iMovie", id: 408981434
+mas "Magnet", id: 441258766
+mas "QuickBooks", id: 640830064
+mas "Slack", id: 803453959
+mas "WiFi Explorer", id: 494803304
+mas "WiFi Signal", id: 525912054
+mas "Xcode", id: 497799835
 
