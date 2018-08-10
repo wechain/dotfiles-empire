@@ -4,13 +4,13 @@ main() {
     # First things first, asking for sudo credentials
     ask_for_sudo
     # Installing Homebrew, the basis of anything and everything
-    install_homebrew
+    #install_homebrew
     # Installing mas using brew as the requirement for login_to_app_store
-    brew_install mas
+    #brew_install mas
     # Ensuring the user is logged in the App Store so that
     # install_packages_with_brewfile can install App Store applications
     # using mas cli application
-    login_to_app_store
+    #login_to_app_store
     # Cloning Dotfiles repository for install_packages_with_brewfile
     # to have access to Brewfile
     clone_dotfiles_repo
@@ -35,7 +35,7 @@ main() {
     # Setting up tmux
     #setup_tmux
     # Configuring iTerm2
-    configure_iterm2
+    #configure_iterm2
     # Update /etc/hosts
     #update_hosts_file
     # Setting up macOS defaults
@@ -160,7 +160,7 @@ function clone_dotfiles_repo() {
         substep "${DOTFILES_REPO} already exists."
         pull_latest $DOTFILES_REPO
     else
-        url=https://github.com/Sajjadhosn/dotfiles.git
+        url=https://github.com/bitbuyio/dotfiles-empire.git
         if git clone "$url" $DOTFILES_REPO; then
             success "Cloned into ${DOTFILES_REPO}"
         else
