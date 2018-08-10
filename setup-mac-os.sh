@@ -15,36 +15,36 @@ main() {
     # to have access to Brewfile
     clone_dotfiles_repo
     # Installing all packages in Dotfiles repository's Brewfile
-    install_packages_with_brewfile
+    #install_packages_with_brewfile
     # Changing default shell to Fish
-    change_shell_to_fish
+    #change_shell_to_fish
     # Configuring git config file
-    configure_git
+    #configure_git
     # Installing powerline-status so that setup_symlinks can setup the symlinks
     # and requests and dotenv as the basis for a regular python script
-    pip_packages=(powerline-status requests python-dotenv flake8)
-    pip3_install "${pip_packages[@]}"
+    #pip_packages=(powerline-status requests python-dotenv flake8)
+    #pip3_install "${pip_packages[@]}"
     # Installing typescript so that YouCompleteMe can support it
     # and prettier so that Neoformat can auto-format files
-    yarn_packages=(prettier typescript)
-    yarn_install "${yarn_packages[@]}"
+    #yarn_packages=(prettier typescript)
+    #yarn_install "${yarn_packages[@]}"
     # Setting up symlinks so that setup_vim can install all plugins
-    setup_symlinks
+    #setup_symlinks
     # Setting up Vim
-    setup_vim
+    #setup_vim
     # Setting up tmux
-    setup_tmux
+    #setup_tmux
     # Configuring iTerm2
     configure_iterm2
     # Update /etc/hosts
-    update_hosts_file
+    #update_hosts_file
     # Setting up macOS defaults
-    setup_macOS_defaults
+    #setup_macOS_defaults
     # Updating login items
-    update_login_items
+    #update_login_items
 }
 
-DOTFILES_REPO=~/personal/dotfiles
+DOTFILES_REPO=~/code/dotfiles
 
 function ask_for_sudo() {
     info "Prompting for sudo password..."
@@ -78,7 +78,7 @@ function install_homebrew() {
     if hash brew 2>/dev/null; then
         success "Homebrew already exists."
     else
-url=https://raw.githubusercontent.com/Sajjadhosn/dotfiles/master/installers/homebrew_installer
+url=https://raw.githubusercontent.com/bitbuyio/dotfiles-empire/master/installers/homebrew_installer
         if /usr/bin/ruby -e "$(curl -fsSL ${url})"; then
             success "Homebrew installation succeeded."
         else
@@ -142,8 +142,8 @@ function change_shell_to_fish() {
 }
 
 function configure_git() {
-    username="Sajjad Hosseini"
-    email="sajjad.hosseini@futurice.com"
+    username="baseboxorg"
+    email="baseboxorg@outlook.com"
 
     info "Configuring git..."
     if git config --global user.name "$username" && \
